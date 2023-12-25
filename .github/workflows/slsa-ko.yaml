@@ -31,9 +31,3 @@ jobs:
       contents: read
       packages: write
     uses: NGUPP/slsa-github-generator-ko/blob/main/.github/workflows/slsa3-builder.yml@main
-    with:
-      args: -B --platform=linux/amd64,linux/arm64,linux/386,linux/arm --tags=latest .
-      username: asraa
-      envs: KO_DOCKER_REPO=docker.io/asraa,GIT_VERSION=${{needs.args.outputs.version}},GIT_SOMETHING=${{needs.args.outputs.something}}
-    secrets:
-      password: ${{ secrets.DOCKER_TOKEN }}
