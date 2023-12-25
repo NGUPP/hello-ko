@@ -30,7 +30,7 @@ jobs:
       id-token: write
       contents: read
       packages: write
-    uses: laurentsimon/slsa-github-generator-ko/.github/workflows/slsa3-builder.yml@main
+    uses: NGUPP/slsa-github-generator-ko/blob/main/.github/workflows/slsa3-builder.yml@main
     with:
       args: -B --platform=linux/amd64,linux/arm64,linux/386,linux/arm --tags=latest .
       username: asraa
